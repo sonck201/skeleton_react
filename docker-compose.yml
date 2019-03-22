@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    domainname: util.partner.yahoo.co.jp
+    env_file:
+      - .env
+    environment:
+      VIRTUAL_HOST: util.partner.yahoo.co.jp
+    volumes:
+      - .:/var/www/html
+    ports:
+      - ${APP_PORT_EXTERNAL}:${APP_PORT_INTERNAL}
+
+networks:
+  default:
+    external:
+      name: partner

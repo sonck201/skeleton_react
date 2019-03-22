@@ -1,0 +1,20 @@
+.content {
+  padding-top: 40px;
+
+  &__alert {
+    .alert {
+      margin: 1rem 0 0;
+    }
+  }
+
+  &__fluid {
+    padding-top: 1rem;
+  }
+
+  &__page {
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+  }
+}
